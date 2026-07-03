@@ -1,0 +1,144 @@
+@define-color nord0 #3B4252;
+@define-color nord0_transparent rgba(59, 66, 82, 0.95);
+@define-color nord1 #BF616A;
+@define-color nord2 #A3BE8C;
+@define-color nord3 #EBCB8B;
+@define-color nord4 #81A1C1;
+@define-color nord5 #B48EAD;
+@define-color nord6 #88C0D0;
+@define-color nord7 #E5E9F0;
+@define-color nord8 #53648D;
+@define-color nord9 #D06F79;
+@define-color nord10 #B1D196;
+@define-color nord11 #F0D399;
+@define-color nord12 #8CAFD2;
+@define-color nord13 #C895BF;
+@define-color nord14 #93CCDC;
+@define-color nord15 #E7ECF4;
+
+* {
+  font-family:
+    Comic Code Ligatures,
+    Comic Code;
+  font-size: 15px;
+  padding: 0px 1px;
+}
+
+window#waybar {
+  border-top: 2px solid @nord4;
+  border-right: 2px solid @nord12;
+  border-left: 2px solid @nord12;
+  border-bottom: 2px solid @nord15;
+  border-radius: 8px;
+  background-color: @nord0_transparent;
+  color: @nord7;
+}
+
+#workspaces {
+  padding: 0px;
+  margin: 3px;
+}
+
+#workspaces button {
+  color: @nord7;
+  padding: 0px;
+  margin: 1px;
+  border-radius: 6px;
+}
+
+#workspaces button.active {
+  font-weight: bold;
+  border-color: @nord4;
+}
+
+#workspaces button.visible {
+  background-color: @nord8;
+}
+
+#workspaces button.urgent {
+  background-color: @nord9;
+}
+
+#workspaces button:hover {
+  box-shadow: inherit;
+  text-shadow: inherit;
+  border-color: @nord4;
+  background: @nord8;
+  color: @nord7;
+}
+
+#weather,
+#music,
+#custom-hypr-layout,
+#networking,
+#language-group,
+#clock,
+#audio-drawer {
+  border-radius: 4px;
+  padding: 1px 4px;
+  background: @nord8;
+  margin: 5px 4px 5px 0px;
+}
+
+#custom-weather.temperature,
+#custom-weather.percipitation,
+#custom-weather.wind,
+#language.text,
+#custom-hypr-layout,
+#custom-song-stats-name,
+#workspaces button,
+#clock,
+#pulseaudio.volume {
+  text-shadow: 2px 2px @nord0;
+}
+
+#custom-weather.temperature-emoji,
+#custom-weather.temperature,
+#custom-weather.percipitation-emoji,
+#custom-weather.percipitation,
+#custom-weather.wind-emoji,
+#custom-weather.wind,
+#custom-weather.moon-emoji,
+#custom-song-stats-status,
+#custom-vpn-status,
+#custom-internet-connection,
+#pulseaudio.emoji,
+#language.emoji {
+  margin: 0px 2px 0px 0px;
+}
+
+#custom-song-stats-duration {
+  margin: 2px 2px 0px 0px;
+  text-shadow: 1px 1px @nord0;
+  font-size: 12px;
+}
+
+#custom-song-stats-name {
+  color: @nord2;
+  font-weight: bold;
+  margin: 1px 4px 0px 0px;
+}
+
+#pulseaudio-slider slider {
+  min-height: 0px;
+  min-width: 0px;
+  opacity: 0;
+  background-image: none;
+  border: none;
+  box-shadow: none;
+}
+
+#pulseaudio-slider trough {
+  min-height: 6px;
+  min-width: 70px;
+  border-radius: 5px;
+  background: @nord0_transparent;
+  border-color: @nord8;
+}
+
+#pulseaudio-slider highlight {
+  min-width: 10px;
+  border-radius: 5px;
+  background: @nord2;
+  border-color: @nord0_transparent;
+}

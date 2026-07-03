@@ -1,0 +1,253 @@
+{
+  "layer": "top",
+  "margin-top": 4,
+  "margin-left": 4,
+  "margin-right": 4,
+  "modules-left": ["hyprland/workspaces", "custom/hypr-layout", "group/music"],
+  "modules-center": ["hyprland/window"],
+  "modules-right": ["group/weather","group/audio-drawer","group/networking",  "group/language-group", "clock"],
+  "hyprland/window": {
+    "max-length": 70,
+    "separate-outputs": true,
+    "rewrite": {
+      "(.*) - Brave": "🌎 $1"
+    }
+  },
+  "clock": {
+    "format": "{:%H:%M:%S}",
+    "interval": 1,
+    "tooltip-format": "{calendar}",
+    "calendar": {
+      "mode": "year",
+      "mode-mon-col": 3,
+      "weeks-pos": "left",
+      "on-scroll": 1,
+      "iso8601": true,
+      "format": {
+        "months":     "<span color='#F0D399'><b>{}</b></span>",
+        "days":       "<span color='#E5E9F0'>{}</span>",
+        "weeks":      "<span color='#B1D196'><b>{}</b></span>",
+        "weekdays":   "<span color='#88C0D0'><b>{}</b></span>",
+        "today":      "<span color='#D06F79'><b><u>{}</u></b></span>"
+      }
+    },
+    "actions":  {
+      "on-click-right": "mode",
+      "on-click-middle": "shift_reset",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
+    },
+    "on-click": "exec protoncalendar"
+  },
+  "pulseaudio#emoji": {
+    "format": "{icon}",
+    "tooltip": false,
+    "format-muted": "🔇",
+    "format-icons": {
+      "default": ["🔈", "🔉", "🔊"]
+    },
+    "scroll-step": 5,
+    "on-click": "exec ghostty --class='window.rule.float-pulsemixer' -e pulsemixer",
+    "on-click-middle": "exec pulsemixer --set-volume 100",
+    "on-click-right": "exec pulsemixer --toggle-mute"
+  },
+  "pulseaudio#volume": {
+    "format": "{volume}%",
+    "tooltip": false,
+    "scroll-step": 5,
+    "on-click": "exec ghostty --class='window.rule.float-pulsemixer' -e pulsemixer",
+    "on-click-middle": "exec pulsemixer --set-volume 100",
+    "on-click-right": "exec pulsemixer --toggle-mute"
+  },
+  "group/audio": {
+      "orientation": "horizontal",
+      "modules": [
+        "pulseaudio#emoji",
+        "pulseaudio#volume"
+      ]
+  },
+  "group/audio-drawer": {
+      "orientation": "horizontal",
+      "drawer": {
+        "transition-duration": 500,
+        "children-class": "drawer-child",
+        "transition-left-to-right": false
+      },
+      "modules": [
+        "group/audio",
+        "pulseaudio/slider"
+      ]
+  },
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "11": "1",
+      "12": "2",
+      "13": "3",
+      "14": "4",
+      "15": "5",
+      "16": "6",
+      "17": "7",
+      "18": "8",
+      "19": "9",
+      "20": "10"
+    }
+  },
+  "hyprland/language#emoji": {
+    "format": "⌨️",
+    "on-click": "exec hyprctl switchxkblayout all next"
+  },
+  "hyprland/language#text": {
+    "format-da": "DK",
+    "format-en": "EN",
+    "on-click": "exec hyprctl switchxkblayout all next"
+  },
+  "group/language-group": {
+      "orientation": "horizontal",
+      "modules": [
+        "hyprland/language#emoji",
+        "hyprland/language#text"
+      ]
+  },
+  "network": {
+    "format": "",
+    "format-ethernet": "🖥️🔗",
+    "format-disconnected": "🖥️⛓️‍💥",
+    "on-click": "exec ghostty --class='window.rule.float-nmtui' -e nmtui",
+    "on-click-right": "exec dunstify 'Local IPs' \"$(local-ips)\"",
+    "tooltip": false
+  },
+  "custom/internet-connection": {
+    "exec": "internet-connection",
+    "tooltip": false,
+    "interval": 5,
+    "on-click-right": "exec dunstify 'Public IPs 🌍' \"$(public-ips)\""
+  },
+  "custom/network-traffic-stats": {
+    "exec": "network-traffic-stats",
+    "tooltip": false,
+    "interval": 1
+  },
+  "custom/vpn-status": {
+    "exec": "vpn-status",
+    "tooltip": false,
+    "interval": 1,
+    "on-click-right": "exec dunstify \"$(vpn-status long)\""
+  },
+  "group/networking":{
+      "orientation": "horizontal",
+      "modules": [
+        // "custom/network-traffic-stats",
+        "custom/vpn-status",
+        "custom/internet-connection",
+        "network"
+      ]
+  },
+  "custom/hypr-layout": {
+    "exec": "hypr-layout",
+    "tooltip": false,
+    "interval": "once",
+    "signal": 1
+  },
+  "custom/song-stats-status": {
+    "exec": "song-stats status",
+    "tooltip": false,
+    "interval": 1,
+    "signal": 2,
+    "on-click": "ghostty --class='window.rule.float-rmpc' -e rmpc",
+    "on-click-right": "rmpc togglepause && pkill -RTMIN+2 waybar"
+  },
+  "custom/song-stats-name": {
+    "exec": "song-stats namescroll",
+    "tooltip": false,
+    "escape": true,
+    "on-click": "ghostty --class='window.rule.float-rmpc' -e rmpc",
+    "on-click-right": "rmpc togglepause && pkill -RTMIN+2 waybar"
+  },
+  "custom/song-stats-duration": {
+    "exec": "song-stats duration",
+    "tooltip": false,
+    "interval": 1,
+    "on-click": "ghostty --class='window.rule.float-rmpc' -e rmpc",
+    "on-click-right": "rmpc togglepause && pkill -RTMIN+2 waybar"
+  },
+  "group/music":{
+      "orientation": "horizontal",
+      "modules": [
+        "custom/song-stats-status",
+        "custom/song-stats-name",
+        "custom/song-stats-duration"
+      ]
+  },
+  "custom/weather#emoji": {
+    "exec": "weather-curl weatheremoji",
+    "tooltip": false,
+    "interval": 3600 ,
+    "on-click": "ghostty --class='window.rule.float-weather' -e weather-curl-v2",
+    "on-click-right": "dunstify \"Detailed Weather Report\" \"$(weather-curl details)\""
+  },
+  "custom/weather#temperature-emoji": {
+    "exec": "echo '🌡️'",
+    "tooltip": false,
+    "on-click": "ghostty --class='window.rule.float-weather' -e weather-curl-v2",
+    "on-click-right": "dunstify \"Detailed Weather Report\" \"$(weather-curl details)\""
+  },
+  "custom/weather#temperature": {
+    "exec": "weather-curl temperature",
+    "tooltip": false,
+    "interval": 3600,
+    "on-click": "ghostty --class='window.rule.float-weather' -e weather-curl-v2",
+    "on-click-right": "dunstify \"Detailed Weather Report\" \"$(weather-curl details)\""
+  },
+  "custom/weather#percipitation-emoji": {
+    "exec": "echo '💧'",
+    "tooltip": false,
+    "on-click": "ghostty --class='window.rule.float-weather' -e weather-curl-v2",
+    "on-click-right": "dunstify \"Detailed Weather Report\" \"$(weather-curl details)\""
+  },
+  "custom/weather#percipitation": {
+    "exec": "weather-curl percipitation",
+    "tooltip": false,
+    "interval": 3600,
+    "on-click": "ghostty --class='window.rule.float-weather' -e weather-curl-v2",
+    "on-click-right": "dunstify \"Detailed Weather Report\" \"$(weather-curl details)\""
+  },
+  "custom/weather#wind-emoji": {
+    "exec": "echo '🍃'",
+    "tooltip": false,
+    "on-click": "ghostty --class='window.rule.float-weather' -e weather-curl-v2",
+    "on-click-right": "dunstify \"Detailed Weather Report\" \"$(weather-curl details)\""
+  },
+  "custom/weather#wind": {
+    "exec": "weather-curl wind",
+    "tooltip": false,
+    "interval": 3600,
+    "on-click": "ghostty --class='window.rule.float-weather' -e weather-curl-v2",
+    "on-click-right": "dunstify \"Detailed Weather Report\" \"$(weather-curl details)\""
+  },
+  "custom/weather#moon-emoji": {
+    "exec": "weather-curl moon",
+    "tooltip": false,
+    "interval": 3600,
+    "on-click": "ghostty --class='window.rule.float-weather' -e weather-curl-v2",
+    "on-click-right": "dunstify \"Detailed Weather Report\" \"$(weather-curl details)\""
+  },
+  "group/weather":{
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 500,
+      "children-class": "drawer-child",
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "custom/weather#emoji",
+      "custom/weather#temperature-emoji",
+      "custom/weather#temperature",
+      "custom/weather#percipitation-emoji",
+      "custom/weather#percipitation",
+      "custom/weather#wind-emoji",
+      "custom/weather#wind",
+      "custom/weather#moon-emoji"
+    ]
+  }
+}
