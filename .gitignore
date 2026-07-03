@@ -7,3 +7,4 @@
 .env.*
 secrets.*
 *.secret
+*.add.spl
