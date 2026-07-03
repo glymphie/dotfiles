@@ -152,7 +152,9 @@ compdef _inside inside
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 # Load aliases if existent
-[ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
+[ -f "$XDG_CONFIG_HOME/aliasrc" ] && source "$XDG_CONFIG_HOME/aliasrc"
 
 # Plugins
-source "$ZSHPLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+source /usr/share/zsh/site-functions/zsh-syntax-highlighting.zsh
+
+ZSH_HIGHLIGHT_STYLES[arg0]="fg=magenta,bold"

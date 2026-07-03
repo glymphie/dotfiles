@@ -67,9 +67,6 @@ export NOTES="$GRIMOIRE/notes"
 export TODO="$GRIMOIRE/todo"
 export BLOGPOSTS="$GRIMOIRE/blogposts"
 
-# Plugins
-export ZSHPLUGINS="$CODE/external/zsh_plugins"
-
 # Curl Ca cert
 export CURL_CA_BUNDLE="/etc/ssl/certs/ca-certificates.crt"
 
