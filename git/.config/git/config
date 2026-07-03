@@ -1,0 +1,27 @@
+[user]
+    name = glymphie
+    email = glymphie@protonmail.com
+    signingkey = ~/.ssh/id_github.pub
+[alias]
+    graph = log --all --graph --decorate
+    root = rev-parse --show-toplevel
+[mergetool "nvim"]
+    cmd = nvim -d \"$MERGED\"
+[merge]
+    tool = nvim
+[mergetool]
+    prompt = false
+[pager]
+    branch = false
+[core]
+    excludesfile = ~/.config/git/global_gitignore
+[init]
+    defaultBranch = main
+[pull]
+    rebase = false
+[gpg]
+    format = ssh
+[commit]
+    gpgsign = true
+[tag]
+    gpgSign = true
