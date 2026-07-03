@@ -1,0 +1,585 @@
+{
+  "name": "friendly-snippets",
+  "engines": {
+    "vscode": "^1.11.0"
+  },
+  "contributes": {
+    "snippets": [
+      {
+        "language": [
+          "plaintext",
+          "markdown",
+          "tex",
+          "html",
+          "global",
+          "all"
+        ],
+        "path": "./global.json"
+      },
+      {
+        "language": [
+          "license"
+        ],
+        "path": "./license.json"
+      },
+      {
+        "language": "c",
+        "path": "./c/c.json"
+      },
+      {
+        "language": "cdoc",
+        "path": "./c/cdoc.json"
+      },
+      {
+        "language": "cpp",
+        "path": "./cpp/cpp.json"
+      },
+      {
+        "language": "cppdoc",
+        "path": "./cpp/cppdoc.json"
+      },
+      {
+        "language": [
+          "csharp",
+          "cs"
+        ],
+        "path": "./csharp/csharp.json"
+      },
+      {
+        "language": "csharpdoc",
+        "path": "./csharp/csharpdoc.json"
+      },
+      {
+        "language": [
+          "gitcommit",
+          "NeogitCommitMessage"
+        ],
+        "path": "./gitcommit.json"
+      },
+      {
+        "language": "ejs",
+        "path": "./frameworks/ejs.json"
+      },
+      {
+        "language": "eruby",
+        "path": "./erb.json"
+      },
+      {
+        "language": "erlang",
+        "path": "./erlang.json"
+      },
+      {
+        "language": "elixir",
+        "path": "./elixir.json"
+      },
+      {
+        "language": [
+          "eelixir",
+          "heex"
+        ],
+        "path": "./eelixir.json"
+      },
+      {
+        "language": "fortran",
+        "path": "./fortran.json"
+      },
+      {
+        "language": "glsl",
+        "path": "./glsl.json"
+      },
+      {
+        "language": "nix",
+        "path": "./nix.json"
+      },
+      {
+        "language": "liquid",
+        "path": "./liquid.json"
+      },
+      {
+        "language": "lua",
+        "path": "./lua/lua.json"
+      },
+      {
+        "language": "luadoc",
+        "path": "./lua/luadoc.json"
+      },
+      {
+        "language": "go",
+        "path": "./go.json"
+      },
+      {
+        "language": "fennel",
+        "path": "./fennel.json"
+      },
+      {
+        "language": "fsh",
+        "path": "./fsh.json"
+      },
+      {
+        "language": "php",
+        "path": "./php/php.json"
+      },
+      {
+        "language": "phpdoc",
+        "path": "./php/phpdoc.json"
+      },
+      {
+        "language": "quarto",
+        "path": "./quarto.json"
+      },
+      {
+        "language": "rescript",
+        "path": "./rescript.json"
+      },
+      {
+        "language": "ruby",
+        "path": "./ruby/ruby.json"
+      },
+      {
+        "language": "rdoc",
+        "path": "./ruby/rdoc.json"
+      },
+      {
+        "language": "rails",
+        "path": "./frameworks/rails.json"
+      },
+      {
+        "language": "rust",
+        "path": "./rust/rust.json"
+      },
+      {
+        "language": "rustdoc",
+        "path": "./rust/rustdoc.json"
+      },
+      {
+        "language": "rust",
+        "path": "./frameworks/relm4/workers.json"
+      },
+      {
+        "language": "rust",
+        "path": "./frameworks/relm4/factories.json"
+      },
+      {
+        "language": "rust",
+        "path": "./frameworks/relm4/templates.json"
+      },
+      {
+        "language": "rust",
+        "path": "./frameworks/relm4/components.json"
+      },
+      {
+        "language": "haskell",
+        "path": "./haskell.json"
+      },
+      {
+        "language": "scala",
+        "path": "./scala.json"
+      },
+      {
+        "language": "solidity",
+        "path": "./solidity.json"
+      },
+      {
+        "language": "swift",
+        "path": "./swift.json"
+      },
+      {
+        "language": "sql",
+        "path": "./sql.json"
+      },
+      {
+        "language": "systemverilog",
+        "path": "./systemverilog.json"
+      },
+      {
+        "language": [
+          "shellscript",
+          "shell",
+          "sh",
+          "zsh"
+        ],
+        "path": "./shell/shell.json"
+      },
+      {
+        "language": "shelldoc",
+        "path": "./shell/shelldoc.json"
+      },
+      {
+        "language": [
+          "markdown",
+          "rmd"
+        ],
+        "path": "./markdown.json"
+      },
+      {
+        "language": [
+          "plaintex",
+          "tex"
+        ],
+        "path": "./latex.json"
+      },
+      {
+        "language": "plantuml",
+        "path": "./plantuml.json"
+      },
+      {
+        "language": "java",
+        "path": "./java/java.json"
+      },
+      {
+        "language": "java-testing",
+        "path": "./java/java-tests.json"
+      },
+      {
+        "language": "javadoc",
+        "path": "./java/javadoc.json"
+      },
+      {
+        "language": "julia",
+        "path": "./julia.json"
+      },
+      {
+        "language": [
+          "html",
+          "jade",
+          "pug",
+          "eruby",
+          "javascriptreact",
+          "htmldjango",
+          "astro"
+        ],
+        "path": "./html.json"
+      },
+      {
+        "language": [
+          "css",
+          "scss",
+          "sass",
+          "less",
+          "stylus"
+        ],
+        "path": "./css.json"
+      },
+      {
+        "language": [
+          "javascript",
+          "javascriptreact",
+          "vue",
+          "svelte"
+        ],
+        "path": "./javascript/javascript.json"
+      },
+      {
+        "language": "jsdoc",
+        "path": "./javascript/jsdoc.json"
+      },
+      {
+        "language": "tsdoc",
+        "path": "./javascript/tsdoc.json"
+      },
+      {
+        "language": [
+          "typescript",
+          "typescriptreact"
+        ],
+        "path": "./javascript/typescript.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./javascript/react.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./javascript/react-native.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./javascript/next.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./javascript/react-ts.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./javascript/next-ts.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./javascript/react-native-ts.json"
+      },
+      {
+        "language": [
+          "javascriptreact",
+          "typescriptreact"
+        ],
+        "path": "./javascript/react-es7.json"
+      },
+      {
+        "language": "svelte",
+        "path": "./svelte.json"
+      },
+      {
+        "language": "vue",
+        "path": "./frameworks/vue/html.json"
+      },
+      {
+        "language": "vue",
+        "path": "./frameworks/vue/nuxt_html.json"
+      },
+      {
+        "language": "vue",
+        "path": "./frameworks/vue/nuxt_js_ts.json"
+      },
+      {
+        "language": "vue",
+        "path": "./frameworks/vue/javascript.json"
+      },
+      {
+        "language": "vue",
+        "path": "./frameworks/vue/vue.json"
+      },
+      {
+        "language": "angular",
+        "path": "./frameworks/angular/html.json"
+      },
+      {
+        "language": "angular",
+        "path": "./frameworks/angular/typescript.json"
+      },
+      {
+        "language": "angular",
+        "path": "./frameworks/angular/jsonc.json"
+      },
+      {
+        "language": "python",
+        "path": "./python/base.json"
+      },
+      {
+        "language": "python",
+        "path": "./python/comprehension.json"
+      },
+      {
+        "language": "python",
+        "path": "./python/debug.json"
+      },
+      {
+        "language": "python",
+        "path": "./python/python.json"
+      },
+      {
+        "language": "python",
+        "path": "./python/unittest.json"
+      },
+      {
+        "language": "pydoc",
+        "path": "./python/pydoc.json"
+      },
+      {
+        "language": "django",
+        "path": "./frameworks/django/admin.json"
+      },
+      {
+        "language": "django",
+        "path": "./frameworks/django/forms.json"
+      },
+      {
+        "language": "django",
+        "path": "./frameworks/django/models.json"
+      },
+      {
+        "language": "django",
+        "path": "./frameworks/django/tags.json"
+      },
+      {
+        "language": "django",
+        "path": "./frameworks/django/urls.json"
+      },
+      {
+        "language": "django",
+        "path": "./frameworks/django/views.json"
+      },
+      {
+        "language": [
+          "djangohtml",
+          "htmldjango"
+        ],
+        "path": "./frameworks/djangohtml.json"
+      },
+      {
+        "language": "django-rest",
+        "path": "./frameworks/django/django_rest/serializers.json"
+      },
+      {
+        "language": "django-rest",
+        "path": "./frameworks/django/django_rest/views.json"
+      },
+      {
+        "language": "flutter",
+        "path": "./frameworks/flutter.json"
+      },
+      {
+        "language": "jekyll",
+        "path": "./frameworks/jekyll.json"
+      },
+      {
+        "language": "cobol",
+        "path": "./cobol/vscode_cobol.json"
+      },
+      {
+        "language": "cobol",
+        "path": "./cobol/vscode_cobol-compound.json"
+      },
+      {
+        "language": "cobol",
+        "path": "./cobol/vscode_cobol_dir.json"
+      },
+      {
+        "language": "cobol",
+        "path": "./cobol/vscode_cobol_jcl.json"
+      },
+      {
+        "language": "kotlin",
+        "path": "./kotlin/kotlin.json"
+      },
+      {
+        "language": "kdoc",
+        "path": "./kotlin/kdoc.json"
+      },
+      {
+        "language": [
+          "plaintex",
+          "tex"
+        ],
+        "path": "./latex/latex-snippets.json"
+      },
+      {
+        "language": [
+          "plaintex",
+          "tex"
+        ],
+        "path": "./latex/vscode-latex-snippets.json"
+      },
+      {
+        "language": [
+          "bibtex",
+          "bib"
+        ],
+        "path": "./latex/bibtex.json"
+      },
+      {
+        "language": "twig",
+        "path": "./frameworks/twig.json"
+      },
+      {
+        "language": [
+          "r",
+          "rmd"
+        ],
+        "path": "./r.json"
+      },
+      {
+        "language": "rmd",
+        "path": "./rmarkdown.json"
+      },
+      {
+        "language": "org",
+        "path": "./org.json"
+      },
+      {
+        "language": "norg",
+        "path": "./norg.json"
+      },
+      {
+        "language": "mint",
+        "path": "./mint.json"
+      },
+      {
+        "language": "gdscript",
+        "path": "./gdscript.json"
+      },
+      {
+        "language": "yaml",
+        "path": "./kubernetes.json"
+      },
+      {
+        "language": "yaml",
+        "path": "./docker/docker-compose.json"
+      },
+      {
+        "language": "make",
+        "path": "./make.json"
+      },
+      {
+        "language": "dart",
+        "path": "./dart.json"
+      },
+      {
+        "language": "objc",
+        "path": "./objc.json"
+      },
+      {
+        "language": "unreal",
+        "path": "./frameworks/unreal.json"
+      },
+      {
+        "language": "unity",
+        "path": "./frameworks/unity.json"
+      },
+      {
+        "language": "tcl",
+        "path": "./tcl.json"
+      },
+      {
+        "language": "verilog",
+        "path": "./verilog.json"
+      },
+      {
+        "language": "vhdl",
+        "path": "./vhdl.json"
+      },
+      {
+        "language": "dockerfile",
+        "path": "./docker/docker_file.json"
+      },
+      {
+        "language": "edge",
+        "path": "./frameworks/edge.json"
+      },
+      {
+        "language": [
+          "powershell",
+          "ps1"
+        ],
+        "path": "./PowerShell.json"
+      },
+      {
+        "language": "nu",
+        "path": "./nushell.json"
+      },
+      {
+        "language": "reason",
+        "path": "./reason.json"
+      },
+      {
+        "language": [
+          "ocaml",
+          "ocamlinterface"
+        ],
+        "path": "./ocaml/ocaml.json"
+      },
+      {
+        "language": "ocaml.ocamllex",
+        "path": "./ocaml/ocamllex.json"
+      },
+      {
+        "language": "dune-project",
+        "path": "./ocaml/dune-project.json"
+      },
+      {
+        "language": "dune",
+        "path": "./ocaml/dune.json"
+      }
+    ]
+  }
+}
