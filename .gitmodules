@@ -1,0 +1,3 @@
+[submodule "hyprland/.config/hypr/conf/plugins/split-monitor-workspaces"]
+	path = hyprland/.config/hypr/conf/plugins/split-monitor-workspaces
+	url = https://github.com/zjeffer/split-monitor-workspaces
