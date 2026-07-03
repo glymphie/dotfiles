@@ -183,53 +183,53 @@
     "exec": "weather-curl weatheremoji",
     "tooltip": false,
     "interval": 3600 ,
-    "on-click": "ghostty --class='window.rule.float-weather' -e weather-curl-v2",
+    "on-click": "ghostty --class='window.rule.float-weather' -e weather-curl-info",
     "on-click-right": "dunstify \"Detailed Weather Report\" \"$(weather-curl details)\""
   },
   "custom/weather#temperature-emoji": {
     "exec": "echo '🌡️'",
     "tooltip": false,
-    "on-click": "ghostty --class='window.rule.float-weather' -e weather-curl-v2",
+    "on-click": "ghostty --class='window.rule.float-weather' -e weather-curl-info",
     "on-click-right": "dunstify \"Detailed Weather Report\" \"$(weather-curl details)\""
   },
   "custom/weather#temperature": {
     "exec": "weather-curl temperature",
     "tooltip": false,
     "interval": 3600,
-    "on-click": "ghostty --class='window.rule.float-weather' -e weather-curl-v2",
+    "on-click": "ghostty --class='window.rule.float-weather' -e weather-curl-info",
     "on-click-right": "dunstify \"Detailed Weather Report\" \"$(weather-curl details)\""
   },
   "custom/weather#percipitation-emoji": {
     "exec": "echo '💧'",
     "tooltip": false,
-    "on-click": "ghostty --class='window.rule.float-weather' -e weather-curl-v2",
+    "on-click": "ghostty --class='window.rule.float-weather' -e weather-curl-info",
     "on-click-right": "dunstify \"Detailed Weather Report\" \"$(weather-curl details)\""
   },
   "custom/weather#percipitation": {
     "exec": "weather-curl percipitation",
     "tooltip": false,
     "interval": 3600,
-    "on-click": "ghostty --class='window.rule.float-weather' -e weather-curl-v2",
+    "on-click": "ghostty --class='window.rule.float-weather' -e weather-curl-info",
     "on-click-right": "dunstify \"Detailed Weather Report\" \"$(weather-curl details)\""
   },
   "custom/weather#wind-emoji": {
     "exec": "echo '🍃'",
     "tooltip": false,
-    "on-click": "ghostty --class='window.rule.float-weather' -e weather-curl-v2",
+    "on-click": "ghostty --class='window.rule.float-weather' -e weather-curl-info",
     "on-click-right": "dunstify \"Detailed Weather Report\" \"$(weather-curl details)\""
   },
   "custom/weather#wind": {
     "exec": "weather-curl wind",
     "tooltip": false,
     "interval": 3600,
-    "on-click": "ghostty --class='window.rule.float-weather' -e weather-curl-v2",
+    "on-click": "ghostty --class='window.rule.float-weather' -e weather-curl-info",
     "on-click-right": "dunstify \"Detailed Weather Report\" \"$(weather-curl details)\""
   },
   "custom/weather#moon-emoji": {
     "exec": "weather-curl moon",
     "tooltip": false,
     "interval": 3600,
-    "on-click": "ghostty --class='window.rule.float-weather' -e weather-curl-v2",
+    "on-click": "ghostty --class='window.rule.float-weather' -e weather-curl-info",
     "on-click-right": "dunstify \"Detailed Weather Report\" \"$(weather-curl details)\""
   },
   "group/weather":{
