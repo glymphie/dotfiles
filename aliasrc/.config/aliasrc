@@ -1,0 +1,28 @@
+#!/bin/sh
+
+# Regular stuff you always want on normal commands
+alias \
+    mkdir="mkdir -p"
+#    cp="cp -iv" \
+#    mv="mv -iv" \
+#    rm="rm -v" \
+
+# Colorize output from commands
+alias \
+    ls="ls --color=auto --group-directories-first -v" \
+    diff="diff --color=auto" \
+    grep="grep --color=auto"
+
+# Shortened commands
+alias history="history 0"
+
+# Config
+alias tmux="tmux -f $XDG_CONFIG_HOME/tmux/tmux.conf"
+
+# Grimoire
+alias \
+    notes="cd $NOTES; nvim index.md" \
+    todo="cd $TODO; nvim index.md" \
+    blogposts="cd $BLOGPOSTS; nvim index.md"
+
+alias zathura="zathura-full"
