@@ -4,7 +4,6 @@ My personal Linux configuration files, managed with GNU Stow.
 
 ## Requirements
 
-- Git
 - GNU Stow
 
 ## Installation
