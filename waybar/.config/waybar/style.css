@@ -72,6 +72,7 @@ window#waybar {
 #custom-hypr-layout,
 #networking,
 #language-group,
+#bluetooth-group,
 #clock,
 #audio-drawer {
   border-radius: 4px;
@@ -88,6 +89,7 @@ window#waybar {
 #custom-song-stats-name,
 #workspaces button,
 #clock,
+#bluetooth-group,
 #pulseaudio.volume {
   text-shadow: 2px 2px @nord0;
 }

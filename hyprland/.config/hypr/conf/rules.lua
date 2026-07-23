@@ -86,6 +86,18 @@ hl.window_rule({
 	},
 })
 
+hl.window_rule({
+	name = "float-blueman-manager",
+	match = {
+		class = "blueman-manager",
+	},
+	float = true,
+	size = {
+		1000,
+		840,
+	},
+})
+
 -- Maximize some webapps
 hl.window_rule({
 	name = "maximize-brave-apps",
