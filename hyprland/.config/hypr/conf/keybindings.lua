@@ -17,7 +17,7 @@ hl.bind(SECONDMOD .. " + F12", hl.dsp.exec_cmd("hyprshutdown --post-cmd 'loginct
 
 -- Window options
 hl.bind(SECONDMOD .. " + T", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(SECONDMOD .. " + F", hl.dsp.window.fullscreen({ mode = "maximized" }))
+hl.bind(SECONDMOD .. " + F", hl.dsp.window.fullscreen({ mode = "fullscreen" }))
 
 -- dwindle, master, scrolling layout
 local function update_waybar_hypr_layout()
@@ -106,6 +106,10 @@ hl.bind(MAINMOD .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 -- Music
 hl.bind("XF86AudioNext", hl.dsp.exec_cmd("rmpc next"))
 hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("rmpc prev"))
+hl.bind("XF86AudioPlay", function()
+	hl.exec_cmd("rmpc togglepause")
+	hl.exec_cmd("pkill -RTMIN+2 waybar")
+end)
 hl.bind(MAINMOD .. " + P", function()
 	hl.exec_cmd("rmpc togglepause")
 	hl.exec_cmd("pkill -RTMIN+2 waybar")
