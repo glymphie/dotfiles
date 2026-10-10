@@ -33,7 +33,7 @@ window#waybar {
 
 #workspaces {
   padding: 0px;
-  margin: 3px;
+  margin: 4px 3px;
 }
 
 #workspaces button {
