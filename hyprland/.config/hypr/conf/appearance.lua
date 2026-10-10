@@ -1,13 +1,13 @@
 -- Refer to https://wiki.hypr.land/Configuring/Basics/Variables/
 hl.config({
 	general = {
-		gaps_in = 2,
-		gaps_out = 4,
+		gaps_in = 1,
+		gaps_out = 2,
 
 		border_size = 2,
 
 		col = {
-			active_border = { colors = { "#81a1c1", "#E7ECF4" }, angle = 90 },
+			active_border = { colors = { "#81a1c1" } },
 			inactive_border = "rgba(595959aa)",
 		},
 
@@ -21,8 +21,8 @@ hl.config({
 	},
 
 	decoration = {
-		rounding = 8,
-		rounding_power = 3,
+		rounding = 1,
+		rounding_power = 2,
 
 		shadow = {
 			enabled = false,
@@ -34,7 +34,7 @@ hl.config({
 		blur = {
 			enabled = true,
 			size = 8,
-			passes = 1,
+			passes = 2,
 			vibrancy = 0.1696,
 		},
 	},
