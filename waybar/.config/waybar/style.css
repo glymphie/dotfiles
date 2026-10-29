@@ -15,35 +15,36 @@
 @define-color nord13 #C895BF;
 @define-color nord14 #93CCDC;
 @define-color nord15 #E7ECF4;
+@define-color transparent rgba(00,00,00,00);
 
 * {
   font-family:
     Comic Code Ligatures,
     Comic Code;
-  font-size: 15px;
-  padding: 0px 1px;
+  font-size: 14px;
+  padding: 0px 0px;
 }
 
 window#waybar {
-  border: 2px solid @nord4;
-  border-radius: 2px;
   background-color: @nord0_transparent;
   color: @nord7;
 }
 
 #workspaces {
   padding: 0px;
-  margin: 4px 3px;
 }
 
 #workspaces button {
   color: @nord7;
   padding: 0px;
-  margin: 1px;
-  border-radius: 2px;
+  margin: 0px 0px 0px 0px;
+  border-radius: 0px;
+  border: 2px solid;
+  border-color: @transparent;
 }
 
 #workspaces button.active {
+  border: 2px solid;
   font-weight: bold;
   border-color: @nord4;
 }
@@ -57,6 +58,7 @@ window#waybar {
 }
 
 #workspaces button:hover {
+  border: 2px solid;
   box-shadow: inherit;
   text-shadow: inherit;
   border-color: @nord4;
@@ -64,19 +66,26 @@ window#waybar {
   color: @nord7;
 }
 
+#custom-hypr-layout,
 #weather,
 #music,
-#custom-hypr-layout,
+#clock,
 #networking,
 #language-group,
 #bluetooth-group,
-#clock,
 #audio-drawer {
-  border: 1px solid @nord4;
-  border-radius: 2px;
+  border: 0px solid @nord4;
   padding: 1px 4px;
   background: @nord8;
-  margin: 5px 4px 5px 0px;
+  margin: 0px 2px 0px 0px;
+}
+
+#custom-hypr-layout {
+  margin-left: 2px;
+}
+
+#clock {
+  margin-right: 0px;
 }
 
 #custom-weather.temperature,
@@ -109,14 +118,14 @@ window#waybar {
 
 #custom-song-stats-duration {
   margin: 2px 2px 0px 0px;
-  text-shadow: 1px 1px @nord0;
+  text-shadow: 2px 2px @nord0;
   font-size: 12px;
 }
 
 #custom-song-stats-name {
   color: @nord2;
   font-weight: bold;
-  margin: 1px 4px 0px 0px;
+  margin: 2px 6px 0px 4px;
 }
 
 #pulseaudio-slider slider {

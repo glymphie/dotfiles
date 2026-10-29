@@ -1,8 +1,5 @@
 {
   "layer": "top",
-  "margin-top": 2,
-  "margin-left": 2,
-  "margin-right": 2,
   "modules-left": ["hyprland/workspaces", "custom/hypr-layout", "group/music"],
   "modules-center": ["hyprland/window"],
   "modules-right": ["group/weather","group/audio-drawer","group/networking", "group/bluetooth-group",  "group/language-group", "clock"],
