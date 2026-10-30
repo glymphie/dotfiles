@@ -98,6 +98,18 @@ hl.window_rule({
 	},
 })
 
+hl.window_rule({
+	name = "float-xdg-desktop-portal-gtk",
+	match = {
+		class = "xdg-desktop-portal-gtk",
+	},
+	float = true,
+	size = {
+		1000,
+		840,
+	},
+})
+
 -- Maximize some webapps
 hl.window_rule({
 	name = "maximize-brave-apps",
